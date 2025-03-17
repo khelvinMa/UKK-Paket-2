@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add-button {
+    background-color: rgb(0, 128, 0);
+}
+
+.search-button {
+    background-color: rgb(255, 165, 0);
+}
+
+.edit-button {
+    background-color: rgb(0, 0, 255);
+}
+
+.delete-button {
+    background-color: rgb(255, 0, 0);
+}
+
+.add-button:hover {
+    background-color: rgb(100, 128, 100);
+}
+
+.search-button:hover {
+    background-color: rgb(255, 165, 100);
+}
+
+.edit-button:hover {
+    background-color: rgb(100, 100, 255);
+}
+
+.delete-button:hover {
+    background-color: rgb(255, 100, 100);
+}
+
+.search-form {
+    display: flex;
+    justify-content: right;
+}
+
+.search-form input,
+.search-form select {
+    border: 1px solid #ddd;
+    margin: 2.5px;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table tr:hover {
+    background-color: #f4f4f4;
+}
+
+table tr,
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.history-button {
+    background-color: rgb(0, 0, 0);
+}
+
+.history-button:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+.home-button{
+    background-color: #ddd;
+    color: black;
+}
+
+.home-button:hover{
+    background-color: #f4f4f4;
+    color: black;
+}
