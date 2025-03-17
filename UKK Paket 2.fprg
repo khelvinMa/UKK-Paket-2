@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="UKK Paket 2"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-17 09:59:04 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1BTUYxVkRJOzIwMjUtMDMtMTc7MDk6NDc6MTYgQU07MjgzNg=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1BTUYxVkRJOzIwMjUtMDMtMTc7MDk6NTk6MDQgQU07MTsyOTQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="menu" type="Integer" array="False" size=""/>
+            <declare name="task" type="String" array="False" size=""/>
+            <output expression="&quot;To-Do List Sederhana&quot;" newline="True"/>
+            <output expression="&quot;1.Menambahkan Tugas&quot;" newline="True"/>
+            <output expression="&quot;2.Menampilkan Tugas&quot;" newline="True"/>
+            <output expression="&quot;3.Mengedit Tugas&quot;" newline="True"/>
+            <output expression="&quot;4.Menghapus Tugas&quot;" newline="True"/>
+            <input variable="menu"/>
+            <if expression="menu=1">
+                <then>
+                    <output expression="&quot;Menambahkan Tugas&quot;" newline="True"/>
+                    <input variable="task"/>
+                    <open expression="&quot;tugas.txt&quot;" mode="write"/>
+                    <write expression="task"/>
+                    <close mode="write"/>
+                    <output expression="&quot;Berhasil Menambahkan Tugas&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="menu=2">
+                        <then>
+                            <output expression="&quot;Menampilkan Tugas&quot;" newline="True"/>
+                            <open expression="&quot;tugas.txt&quot;" mode="read"/>
+                            <read variable="task"/>
+                            <output expression="task" newline="True"/>
+                            <close mode="read"/>
+                        </then>
+                        <else>
+                            <if expression="menu=3">
+                                <then>
+                                    <output expression="&quot;Menampilkan Tugas&quot;" newline="True"/>
+                                    <open expression="&quot;tugas.txt&quot;" mode="read"/>
+                                    <read variable="task"/>
+                                    <output expression="task" newline="True"/>
+                                    <close mode="read"/>
+                                    <output expression="&quot;Mengedit Tugas&quot;" newline="True"/>
+                                    <input variable="task"/>
+                                    <output expression="&quot;Apakah Anda Yakin Ingin Mengedit Tugas?&quot;" newline="True"/>
+                                    <output expression="&quot;1.Ya&quot;" newline="True"/>
+                                    <output expression="&quot;2.Tidak&quot;" newline="True"/>
+                                    <input variable="menu"/>
+                                    <if expression="menu=1">
+                                        <then>
+                                            <open expression="&quot;tugas.txt&quot;" mode="write"/>
+                                            <write expression="task"/>
+                                            <close mode="write"/>
+                                            <output expression="&quot;Berhasil Mengedit Tugas&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Gagal Mengedit Tugas&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="menu=4">
+                                        <then>
+                                            <output expression="&quot;Menghapus Tugas&quot;" newline="True"/>
+                                            <output expression="&quot;Apakah Anda Yakin Ingin Menghapus Tugas?&quot;" newline="True"/>
+                                            <output expression="&quot;1.Ya&quot;" newline="True"/>
+                                            <output expression="&quot;2.Tidak&quot;" newline="True"/>
+                                            <input variable="menu"/>
+                                            <if expression="menu=1">
+                                                <then>
+                                                    <open expression="&quot;tugas.txt&quot;" mode="write"/>
+                                                    <write expression="&quot;&quot;"/>
+                                                    <close mode="write"/>
+                                                    <output expression="&quot;Berhasil Menghapus Tugas&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Gagal Menghapus Tugas&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
